@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  sphinx:
+    build: './'
+    command: make html
+    working_dir: /tmp/documents
+    environment:
+        PYTHONPATH: '/usr/lib/pyhon3/dist-packages'
+    # tty: true
+    volumes:
+      - ./documents:/tmp/documents
