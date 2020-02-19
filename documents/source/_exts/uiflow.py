@@ -76,7 +76,7 @@ def visit_uiflow_node(self, node):
     #     pass
 
     self.body.append(self.starttag(node, 'p', CLASS='uiflow'))
-    self.body.append('<img src="%s" alt="flow"/>\n' % (self.encode(refname)))
+    self.body.append('<img style="max-width: 100%%;" src="%s" alt="flow"/>\n' % (self.encode(refname)))
     self.body.append('</p>\n')
     raise nodes.SkipNode
 
